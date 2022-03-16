@@ -12,10 +12,11 @@ import java.util.Scanner;
  * @author Enzo
  */
 public class array {
-
-    Scanner entrada = new Scanner(System.in); // permite la entrada por teclado de los datos.
     
     public static void main(String[] args) {
+        
+        Scanner entrada = new Scanner(System.in); // permite la entrada por teclado de los datos.
+        
         int bandera = 0;// utilizamos la bandera para que el do-while.
         
         int seleccion = 0;/*utilizamos la seleccion para poder generar un menu en el cual el
@@ -27,9 +28,9 @@ public class array {
             desea realizar */
             do{
             System.out.println("elija la opcion:"
-                    + "1. para ingresar 5 numeros"
-                    + "2. para para ingresar 5 nombres"
-                    + "3. para salir.");//menu de elecciones
+                    + "\n" + "1. para ingresar 5 numeros"
+                    + "\n" + "2. para para ingresar 5 nombres"
+                    + "\n" + "3. para salir.");//menu de elecciones
             seleccion = entrada.nextInt();//guarda en seleccion la opcion elejida por el usuario
             if (seleccion >=1 && seleccion <=3){/* si la opcion esta entre la opciones 1 o 3 
                                                 la bandera pasa a ser 1 para cummplir con la
@@ -40,7 +41,6 @@ public class array {
                     }           
             }while(bandera == 0);
             
-            }
-        }
+        }while (bandera != 2);
     }
 }
