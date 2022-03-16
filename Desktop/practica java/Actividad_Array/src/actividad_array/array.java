@@ -5,17 +5,42 @@
  */
 package actividad_array;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Enzo
  */
 public class array {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+    Scanner entrada = new Scanner(System.in); // permite la entrada por teclado de los datos.
     
+    public static void main(String[] args) {
+        int bandera = 0;// utilizamos la bandera para que el do-while.
+        
+        int seleccion = 0;/*utilizamos la seleccion para poder generar un menu en el cual el
+        usuario deba elegir una opcion */
+        
+        float [] array_numeros = new float [5];//almacena 5 datos numericos en el array
+        String [] array_nombres = new String[5];//almacena 5 datos de cadena en el array
+        do{/*utilizamos el do-while para generar un menu donde el usuario elija que opcion
+            desea realizar */
+            do{
+            System.out.println("elija la opcion:"
+                    + "1. para ingresar 5 numeros"
+                    + "2. para para ingresar 5 nombres"
+                    + "3. para salir.");//menu de elecciones
+            seleccion = entrada.nextInt();//guarda en seleccion la opcion elejida por el usuario
+            if (seleccion >=1 && seleccion <=3){/* si la opcion esta entre la opciones 1 o 3 
+                                                la bandera pasa a ser 1 para cummplir con la
+                                                condicion del do-while*/
+                bandera = 1;
+            }else{//si el usuario ingresa una opcion erronea, notifica de lo sucedido
+                System.out.println("por favor ingrese una opcion entre 1 o 3");
+                    }           
+            }while(bandera == 0);
+            
+            }
+        }
+    }
 }
