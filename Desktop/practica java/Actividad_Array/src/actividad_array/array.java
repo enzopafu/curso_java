@@ -41,6 +41,16 @@ public class array {
                     }           
             }while(bandera == 0);
             
+            if (seleccion == 1){/* si el usuario elije la eleccion uno pide 5 numeros y lo 
+                                   muestra de manera invertida*/
+                for (int i =0;i<5;i++) {//solicita el ingreso de 5 numeros
+            System.out.print(" ingrese el n°"+(i+1)+" : ");
+            array_numeros[i] = entrada.nextInt();
+                }
+                for (int i=4; i>=0;i--) {//muestra los 5 numeros de manera invertida
+            System.out.println(array_numeros[i]);            
+                }
+            } 
         }while (bandera != 2);
     }
 }
