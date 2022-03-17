@@ -41,17 +41,17 @@ public class array {
                     }           
             }while(bandera == 0);
             
-            if (seleccion == 1){/* si el usuario elije la eleccion uno pide 5 numeros y lo 
+            if (seleccion == 1){/* en esta condicion se le pide 5 numeros al usuario y lo 
                                    muestra de manera invertida*/
                 for (int i =0;i<5;i++) {//solicita el ingreso de 5 numeros
             System.out.print(" ingrese el n°"+(i+1)+" : ");
-            array_numeros[i] = entrada.nextInt();
+            array_numeros[i] = entrada.nextFloat();
                 }
                 for (int i=4; i>=0;i--) {//muestra los 5 numeros de manera invertida
             System.out.println(array_numeros[i]);            
                 }
-            }else if ( seleccion == 2){/* si el usuario elije la eleccion dos pide 5 nombres y lo 
-                                   muestra de manera invertida*/
+            }else if (seleccion == 2){/* en este condicional al usuario se le pide 5 nombres
+                                         y lo muestra de manera invertida*/
                 for (int i = 0;i<5;i++) {//solicita el ingreso de 5 nombres
             System.out.print(" ingrese el "+(i+1)+"° nombre : ");
             array_nombres[i] = entrada.next();/* en este caso usamos .next en vez de nextLine
@@ -61,6 +61,9 @@ public class array {
                 for (int i=4; i>=0;i--) {//muestra los 5 nobres de manera invertida
             System.out.println(array_nombres[i]);            
                 }
+            }else if(seleccion == 3){/* con este condicional se cambia el valor a la bandera
+                                        para hacer que el ciclo do-while finalice.*/
+                bandera = 2;
             }
         }while (bandera != 2);
     }
