@@ -50,7 +50,18 @@ public class array {
                 for (int i=4; i>=0;i--) {//muestra los 5 numeros de manera invertida
             System.out.println(array_numeros[i]);            
                 }
-            } 
+            }else if ( seleccion == 2){/* si el usuario elije la eleccion dos pide 5 nombres y lo 
+                                   muestra de manera invertida*/
+                for (int i = 0;i<5;i++) {//solicita el ingreso de 5 nombres
+            System.out.print(" ingrese el "+(i+1)+"° nombre : ");
+            array_nombres[i] = entrada.next();/* en este caso usamos .next en vez de nextLine
+                                                 porque si usamos este ultimo nos saltea el 1°
+                                                 ingreso.*/
+                }
+                for (int i=4; i>=0;i--) {//muestra los 5 nobres de manera invertida
+            System.out.println(array_nombres[i]);            
+                }
+            }
         }while (bandera != 2);
     }
 }
