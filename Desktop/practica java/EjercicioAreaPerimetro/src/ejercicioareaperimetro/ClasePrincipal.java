@@ -50,6 +50,18 @@ public class ClasePrincipal {
                 }
                 System.out.println("El perimetro es :" + c1.getPerimetro());
                 System.out.println("El area es: " + c1.getArea());
+            }else if (seleccion == 2){
+                Triangulo t1;//generacion de objeto de clase Cuadrilatero
+                float lado1, lado2, lado3;//atributos que van a mandar los datos a cuadrilatero
+                System.out.println("Por favor ingrese el primer lado: ");
+                lado1 = entrada.nextFloat();//primer dato ingresado
+                System.out.println("Por favor ingrese el segundo lado: ");
+                lado2 = entrada.nextFloat();//segundo dato ingresado
+                System.out.println("Por favor ingrese el tercer lado: ");
+                lado3 = entrada.nextFloat();//segundo dato ingresado
+                t1 = new Triangulo(lado1,lado2,lado3);
+                System.out.println("El perimetro es :" + t1.getPerimetro());
+                System.out.println("El area es: " + t1.getArea());
             }
         }while(bandera != 2);
     }
