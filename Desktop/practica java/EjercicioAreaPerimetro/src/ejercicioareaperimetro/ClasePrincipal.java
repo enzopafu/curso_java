@@ -26,7 +26,7 @@ public class ClasePrincipal {
                     + "\n" + "1. calcular area y perimetro de cuadrilatero."
                     + "\n" + "2. calcular area y perimetro de triangulo."
                     + "\n" + "3.calcular area y perimetro de circulo."
-                    + "\n" + "4.para salir.");//menu de elecciones
+                    + "\n" + "4.para salir." + "\n");//menu de elecciones
             seleccion = entrada.nextInt();//guarda en seleccion la opcion elejida por el usuario 
             if (seleccion >=1 && seleccion <=4){/* si la opcion esta entre la opciones 1 o 4 
                                                 la bandera pasa a ser 1 para cummplir con la
@@ -49,7 +49,7 @@ public class ClasePrincipal {
                     c1 = new Cuadrilatero(lado1, lado2);
                 }
                 System.out.println("El perimetro es :" + c1.getPerimetro());
-                System.out.println("El area es: " + c1.getArea());
+                System.out.println("El area es: " + c1.getArea() + "\n");
             }else if (seleccion == 2){
                 Triangulo t1;//generacion de objeto de clase triangulo
                 float lado1, lado2, lado3;//atributos que van a mandar los datos a la clase triangulo
@@ -61,7 +61,7 @@ public class ClasePrincipal {
                 lado3 = entrada.nextFloat();//tercer dato ingresado
                 t1 = new Triangulo(lado1,lado2,lado3);
                 System.out.println("El perimetro es :" + t1.getPerimetro());
-                System.out.println("El area es: " + t1.getArea());
+                System.out.println("El area es: " + t1.getArea()+"\n");
             }else if (seleccion == 3){
                 Circulo c1;//generacion de objeto de clase ciruculo
                 float radio;//atributos que van a mandar los datos a la clase circulo
@@ -69,7 +69,10 @@ public class ClasePrincipal {
                 radio = entrada.nextFloat();//dato ingresado
                 c1 = new Circulo(radio);
                 System.out.println("La circunferencia es :" + c1.getCircunferencia());
-                System.out.println("El area es: " + c1.getArea());
+                System.out.println("El area es: " + c1.getArea()+"\n" );
+            }else if(seleccion == 4){//finalizacion
+                System.out.println("\n" + "Gracias por usar el sistema");
+                bandera = 2;
             }
         }while(bandera != 2);
     }
